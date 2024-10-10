@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class RemoveIdenticals {
+public class RemoveUnIdenticals {
 	static Scanner sc= new Scanner(System.in);
 	List getList1(int n) {
 		
@@ -32,7 +32,8 @@ public class RemoveIdenticals {
 	}
 	List removeElements(List<Integer>list1, List<Integer>list2) {
 		
-		list1.removeAll(list2);
+		//list1.removeAll(list2);
+		list1.retainAll(list2);
 		return list1;
 		
 	}
@@ -40,9 +41,9 @@ public class RemoveIdenticals {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//System.out.println("Enter the total ");
-		List<Integer> list1=new RemoveIdenticals().getList1(4);
-		List<Integer> list2=new RemoveIdenticals().getList2(5);
-		System.out.println(list1+"   "+list2+" = "+new RemoveIdenticals().removeElements(list1, list2));
+		List<Integer> list1=new RemoveUnIdenticals().getList1(5);
+		List<Integer> list2=new RemoveUnIdenticals().getList2(5);
+		System.out.println(list1+"   "+list2+" = "+new RemoveUnIdenticals().removeElements(list1, list2));
 		
 	}
 
