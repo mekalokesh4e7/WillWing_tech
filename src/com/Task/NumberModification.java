@@ -19,7 +19,7 @@ public class NumberModification {
 			sb.insert(j, Mof);
 			j++;
 		}
-		sb.append(a[Mstr.length()-1]);
+		sb.append(Math.abs(a[Mstr.length()-1]-a[0]));
 		String sb1=sb.toString();
 		int Converted=Integer.parseInt(sb1);
 		return Converted;
