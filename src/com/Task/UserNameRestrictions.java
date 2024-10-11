@@ -4,7 +4,7 @@ public class UserNameRestrictions {
 	
 	boolean validateUserName(String Name) {
 		int nameLength= Name.length()-"_job".length();
-		if(Name==null||nameLength<=8||!Name.contains("_job")) {
+		if(nameLength<=8||!Name.endsWith("_job")) {
 			return false;
 		}
 		else {
@@ -14,7 +14,7 @@ public class UserNameRestrictions {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(new UserNameRestrictions().validateUserName("kasugrg_job"));
+		System.out.println(new UserNameRestrictions().validateUserName("kasujlgrg_job"));
 	}
 
 }
