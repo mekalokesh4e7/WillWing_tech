@@ -1,4 +1,5 @@
-package com.Task;
+package com.Tech;
+
 
 import java.util.Iterator;
 
@@ -47,21 +48,21 @@ public class OperationOnTwoStrings {
 		
 	}
 	
+	
 	static String modifyTwoCommonChar(String s1, String s2) {
 		//StringBuffer SB= new StringBuffer();
 		//StringBuffer SB1= new StringBuffer(s2);
 		  
 		int FirstString=s1.indexOf(s2);
 		int secondString=s1.indexOf(s2	, FirstString+1);
-		System.out.println(FirstString+" "+secondString);
-		if(secondString != -1) {
-			return s1.substring(0, FirstString)+s1.substring(FirstString, s1.length());
+		System.out.println(FirstString+" "+secondString+" "+(s1.length()-1));
+		if(secondString!=-1) {
+			return s1.substring(0, FirstString)+s1.substring(FirstString+s2.length(), s1.length());
 		}
 		else {
 			return s1;
 		}
-		//System.out.println(SB);
-		//return "aad";
+		
 	}
 
 	public static void main(String[] args) {
@@ -70,7 +71,7 @@ public class OperationOnTwoStrings {
 		String s2="va";
 		System.out.println(" 1) "+modifyStringsAlternative(s1, s2));
 		System.out.println(" 2) "+modifyLastTwoChar(s1, s2));
-		System.out.println(modifyTwoCommonChar(s1,s2));
+		System.out.println(" 3) "+modifyTwoCommonChar(s1,s2));
 	}
 
 }
