@@ -84,7 +84,7 @@ public class OperationOnTwoStrings {
 		else{
 			int mid=(s2.length()/2)+1;
 			String fistHalf=s2.substring(0, mid); 
-			String secondHalf=s2.substring(mid+1, s2.length());
+			String secondHalf=s2.substring(mid, s2.length());
 			return fistHalf+s1+secondHalf;
 		}
 	}
@@ -107,7 +107,7 @@ public class OperationOnTwoStrings {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s1="javajava";
-		String s2="VA";
+		String s2="VVA";
 		System.out.println(" 1) "+modifyStringsAlternative(s1, s2));
 		System.out.println(" 2) "+modifyLastTwoChar(s1, s2));
 		System.out.println(" 3) "+modifyTwoCommonChar(s1,s2));
