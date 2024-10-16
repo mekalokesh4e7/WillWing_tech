@@ -35,30 +35,6 @@ public class OperationOnTwoStrings {
 			return "No Common vlaues";
 		}
 	}
-				
-//		StringBuffer SB= new StringBuffer();
-		
-//		String s4[]=s1.split(s2, -1);
-//		if(s4.length>2) {	
-//			SB1.reverse();
-//			char c[]=new char[s1.length()];
-//			for(int i=0;i<s1.length();i++) {
-//				c[i]= s1.charAt(i);
-//				if(i>((s1.length()-1)-s2.length())) {
-//					SB.append(SB1);
-//					break;
-//				}
-//				else {
-//					SB.append(c[i]);
-//				}
-//			}
-//			String modString=SB.toString();
-//			return modString;
-//		}
-//		else {
-//			String n="No common elements";
-//			return n;
-//		}
 	
 	
 	static String modifyTwoCommonChar(String s1, String s2) {
