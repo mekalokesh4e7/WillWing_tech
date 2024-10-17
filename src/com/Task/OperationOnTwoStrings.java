@@ -26,7 +26,10 @@ public class OperationOnTwoStrings {
 		StringBuffer SB1= new StringBuffer(s2);
 		SB1.reverse();
 		String gj = "(?i)" + s2;
-		String s4[]=s1.split(gj);
+		String s4[]=s1.split(gj,-1);
+		for(String i:s4) {
+			System.out.println(i);
+		}
 		if(s4.length>=2) {
 			String firstIndex=s1.substring(0, s1.length()- s2.length());
 			return firstIndex+SB1;
@@ -36,29 +39,6 @@ public class OperationOnTwoStrings {
 		}
 	}
 				
-//		StringBuffer SB= new StringBuffer();
-		
-//		String s4[]=s1.split(s2, -1);
-//		if(s4.length>2) {	
-//			SB1.reverse();
-//			char c[]=new char[s1.length()];
-//			for(int i=0;i<s1.length();i++) {
-//				c[i]= s1.charAt(i);
-//				if(i>((s1.length()-1)-s2.length())) {
-//					SB.append(SB1);
-//					break;
-//				}
-//				else {
-//					SB.append(c[i]);
-//				}
-//			}
-//			String modString=SB.toString();
-//			return modString;
-//		}
-//		else {
-//			String n="No common elements";
-//			return n;
-//		}
 	
 	
 	static String modifyTwoCommonChar(String s1, String s2) {
@@ -106,8 +86,8 @@ public class OperationOnTwoStrings {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s1="javajava";
-		String s2="VVA";
+		String s1="javajaav";
+		String s2="VA";
 		System.out.println(" 1) "+modifyStringsAlternative(s1, s2));
 		System.out.println(" 2) "+modifyLastTwoChar(s1, s2));
 		System.out.println(" 3) "+modifyTwoCommonChar(s1,s2));
