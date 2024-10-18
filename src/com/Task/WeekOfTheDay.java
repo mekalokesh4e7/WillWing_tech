@@ -27,7 +27,7 @@ public class WeekOfTheDay {
 					dayOfWeekName=formater1.format(date);
 				}
 				else {
-					return "Please enter the currect dated format";
+					return "Please enter the correct dated format";
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
@@ -38,7 +38,7 @@ public class WeekOfTheDay {
 }
 	public static void main(String[] args) {
 		
-		String date="32/01/2024";
+		String date="30/01/2024";
 		String dateFormat="dd/MM/yyyy";
 		System.out.println(getDayOfWeek(date,dateFormat));
 	}
