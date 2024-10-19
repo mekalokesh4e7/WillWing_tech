@@ -4,6 +4,7 @@ public class StringPositive {
 
 	static boolean checkPositive(String fullString) {
 		boolean positive=false;
+		fullString.toLowerCase();
 		char[] charString=fullString.toCharArray();
 		for(int i=0;i<charString.length-1;i++) {
 			int assci=(int)charString[i];

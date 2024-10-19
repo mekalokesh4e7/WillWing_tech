@@ -11,9 +11,11 @@ public class MergeTwoArrays {
 		
 		charArray1.addAll(charArray2);
 		Collections.sort(charArray1);
+		
 		int count=charArray1.size();
 		Character[] newChar=new Character[count];
 		newChar=charArray1.toArray(newChar);
+		
 		return newChar;
 	}
 	
