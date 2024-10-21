@@ -27,10 +27,7 @@ public class OperationOnTwoStrings {
 		SB1.reverse();
 		String gj = "(?i)" + s2;
 		String s4[]=s1.split(gj,-1);
-		for(String i:s4) {
-			System.out.println(i);
-		}
-		if(s4.length>=2) {
+		if(s4.length>2) {
 			String firstIndex=s1.substring(0, s1.length()- s2.length());
 			return firstIndex+SB1;
 		}
@@ -42,7 +39,7 @@ public class OperationOnTwoStrings {
 	
 	
 	static String modifyTwoCommonChar(String s1, String s2) {
-		String s3[]=s1.split("(?i)"+s2);
+		String s3[]=s1.split("(?i)"+s2,-1);
 		if(s3.length>=2) {
 			String modify=s1.replaceFirst("(?i)"+s2,"");
 			return modify;
@@ -86,7 +83,7 @@ public class OperationOnTwoStrings {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s1="javajaav";
+		String s1="javajava";
 		String s2="VA";
 		System.out.println(" 1) "+modifyStringsAlternative(s1, s2));
 		System.out.println(" 2) "+modifyLastTwoChar(s1, s2));
