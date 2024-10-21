@@ -19,12 +19,15 @@ public class FibonacciSeries {
 		return faibonocci;
 	}
 	static int factorial(int[]faibonacci) {
-		int fac = 1;
-		int sum=1;
+		int sum=0;
 		for(int j=0;j<faibonacci.length;j++) {
-			for(int i=1;i<=faibonacci[j];i++) {
-				fac=fac*i;
+			int fac=1;
+			if(faibonacci[j]>1) {
+				for(int i=1;i<=faibonacci[j];i++) {
+					fac=fac*i;
+				}
 			}
+			
 			sum=sum+fac;
 		}
 		return sum;
@@ -32,12 +35,7 @@ public class FibonacciSeries {
 
 	public static void main(String[] args) {
 		
-		System.out.println(faibomacci(5));
-		System.out.println();
-		for(int i:faibonocci) {
-			System.out.println(i);
-		}
-		System.out.println();
+		int[] fainocci=faibomacci(6);
 		System.out.print(factorial(faibonocci));
 	}
 
